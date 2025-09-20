@@ -115,7 +115,7 @@ const Modal = ({ isOpen, onClose, children }: ModalProps) => {
         {/* 모달 컨텐츠 */}
         <div
           ref={modalRef}
-          className="relative bg-white rounded-2xl shadow-xl max-w-md w-full mx-4"
+          className="relative bg-white rounded-2xl shadow-xl max-w-md w-full mx-4 max-h-[90vh] flex flex-col"
           role="document"
         >
           {children}
