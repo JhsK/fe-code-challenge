@@ -5,5 +5,9 @@ interface ModalBodyProps {
 }
 
 export function ModalBody({ children }: ModalBodyProps) {
-  return <div className="px-6 py-2 text-gray-700">{children}</div>;
+  return (
+    <div className="px-6 py-2 text-gray-700 max-h-96 overflow-y-auto">
+      {children}
+    </div>
+  );
 }
