@@ -151,10 +151,10 @@ describe("ModalFormPage", () => {
         expect(screen.getByRole("dialog")).toBeInTheDocument();
       });
 
-      const nameInput = screen.getByLabelText("이름");
-      const emailInput = screen.getByLabelText("이메일");
-      const yearSelect = screen.getByLabelText("FE 경력 연차");
-      const messageInput = screen.getByLabelText("Github 링크 (선택)");
+      const nameInput = screen.getByRole("textbox", { name: /이름/ });
+      const emailInput = screen.getByRole("textbox", { name: /이메일/ });
+      const yearSelect = screen.getByRole("combobox", { name: /FE 경력 연차/ });
+      const messageInput = screen.getByRole("textbox", { name: /Github 링크/ });
 
       expect(nameInput).toHaveAttribute("id", "name");
       expect(emailInput).toHaveAttribute("id", "email");
@@ -173,10 +173,14 @@ describe("ModalFormPage", () => {
         expect(screen.getByRole("dialog")).toBeInTheDocument();
       });
 
-      expect(screen.getByLabelText("이름")).toBeRequired();
-      expect(screen.getByLabelText("이메일")).toBeRequired();
-      expect(screen.getByLabelText("FE 경력 연차")).toBeRequired();
-      expect(screen.getByLabelText("Github 링크 (선택)")).not.toBeRequired();
+      expect(screen.getByRole("textbox", { name: /이름/ })).toBeRequired();
+      expect(screen.getByRole("textbox", { name: /이메일/ })).toBeRequired();
+      expect(
+        screen.getByRole("combobox", { name: /FE 경력 연차/ })
+      ).toBeRequired();
+      expect(
+        screen.getByRole("textbox", { name: /Github 링크/ })
+      ).not.toBeRequired();
 
       // 테스트 정리
       await user.click(screen.getByText("취소"));
