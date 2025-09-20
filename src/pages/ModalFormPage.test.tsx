@@ -2,7 +2,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { vi } from "vitest";
 import { ModalFormPage } from "./ModalFormPage";
-import { modalManager } from "./Modal";
+import { modalManager } from "../Modal";
 
 // alert 함수 모킹
 const mockAlert = vi.fn();

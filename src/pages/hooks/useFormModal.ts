@@ -1,12 +1,6 @@
 import { useState } from "react";
-import { modalManager } from "./Modal";
-
-interface FormData {
-  name: string;
-  email: string;
-  yearOfExperience: string;
-  githubLink: string;
-}
+import { modalManager } from "../../Modal";
+import type { FormData } from "../types";
 
 interface Props {
   modalId: string;

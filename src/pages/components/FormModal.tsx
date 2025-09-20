@@ -1,5 +1,5 @@
-import { Modal } from "./Modal";
-import { useFormModal } from "./useFormModal";
+import { Modal } from "../../Modal";
+import { useFormModal } from "../hooks/useFormModal";
 
 interface FormModalProps {
   modalId: string;

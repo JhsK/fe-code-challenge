@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { vi } from "vitest";
+import { modalManager } from "../../Modal";
 import { FormModal } from "./FormModal";
-import { modalManager } from "./Modal";
 
 describe("FormModal", () => {
   const user = userEvent.setup();

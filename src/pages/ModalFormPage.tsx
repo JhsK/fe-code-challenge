@@ -1,12 +1,6 @@
-import { FormModal } from "./FormModal";
-import { openModal } from "./Modal";
-
-interface FormData {
-  name: string;
-  email: string;
-  yearOfExperience: string;
-  githubLink: string;
-}
+import { FormModal } from "./components/FormModal";
+import { openModal } from "../Modal";
+import type { FormData } from "./types";
 
 export function ModalFormPage() {
   const handleOpenModal = async () => {
